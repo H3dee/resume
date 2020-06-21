@@ -73,7 +73,7 @@ $info_item: 0px 0px 0px 40px;
             }
             .left_contacts_items {
               .left_contacts_line {
-                padding: 2px 0px 0px 20px;
+                padding: 2px 0px 0px 23px;
                 position: relative;
                 margin: 0px 0px 20px 0px;
                 &:nth-child(3) {
@@ -86,8 +86,8 @@ $info_item: 0px 0px 0px 40px;
                 width: 15px;
                 height: 15px;
                 left: 0;
-                top: 0;
-                background: url("/images/mail.svg") center center/cover
+                top: 2px;
+                background: url("https://image.flaticon.com/icons/svg/2089/2089181.svg") center center/cover
                   no-repeat;
                 z-index: 1;
               }
@@ -98,7 +98,7 @@ $info_item: 0px 0px 0px 40px;
                 height: 15px;
                 left: 0;
                 top: 0;
-                background: url("/images/phone.svg") center center/cover
+                background: url("https://image.flaticon.com/icons/svg/483/483947.svg") center center/cover
                   no-repeat;
                 z-index: 1;
               }
@@ -109,7 +109,7 @@ $info_item: 0px 0px 0px 40px;
                 height: 15px;
                 left: 0;
                 top: 0;
-                background: url("/images/telegram.svg") center center/cover
+                background: url("https://image.flaticon.com/icons/svg/1946/1946547.svg") center center/cover
                   no-repeat;
                 z-index: 1;
               }
@@ -154,7 +154,7 @@ $info_item: 0px 0px 0px 40px;
                 height: 15px;
                 top: 0;
                 left: 0;
-                background: url("/images/tick.svg") 0 0 / cover no-repeat;
+                background: url("https://image.flaticon.com/icons/svg/2089/2089627.svg") 0 0 / cover no-repeat;
               }
             }
           }
@@ -227,6 +227,7 @@ $info_item: 0px 0px 0px 40px;
             text-transform: capitalize;
             font-weight: 700;
             letter-spacing: 1.4px;
+            padding-right: 12px;
             margin: 0px 0px 25px 0px;
           }
           .right_im_subtitle {
