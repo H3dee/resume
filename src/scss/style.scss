@@ -1,0 +1,329 @@
+@import "_reseter";
+
+body {
+  background: #f8f8f8;
+}
+.wrapper {
+  min-height: 100%;
+  font-family: "Muli", sans-serif;
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+$info_item: 0px 0px 0px 40px;
+%title {
+  font-size: 18px;
+  color: #2dc2a2;
+  margin: 35px 0px 20px 0px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 2.2px;
+  text-transform: uppercase;
+}
+
+.content {
+  flex: 1 1 auto;
+  min-height: 100%;
+  padding: 30px 0;
+  display: flex;
+  .content_left {
+    flex: 1 1 33%;
+    cursor: pointer;
+    .container {
+      height: 100%;
+      border-right: 0.5px solid #000000e5;
+      padding: 0 15px;
+      .content_left_row {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        .left_image {
+          align-self: center;
+          max-width: 270px;
+          width: 270px;
+          height: 370px;
+          overflow: hidden;
+          margin: 0px 0px 25px 0px;
+          img {
+            border-radius: 50%;
+            height: 100%;
+            max-width: 100%;
+            object-fit: cover;
+          }
+        }
+        .left_info {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          padding: 0px 0px 0px 40px;
+          max-width: 370px;
+          overflow: hidden;
+          .left_contacts {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            letter-spacing: 0.8px;
+            border-top: 0.5px solid #000000e5;
+            padding-top: 20px;
+            .left_contacts_title {
+              @extend %title;
+              margin: 0px 0px 20px 0px;
+            }
+            .left_contacts_items {
+              .left_contacts_line {
+                padding: 2px 0px 0px 20px;
+                position: relative;
+                margin: 0px 0px 20px 0px;
+                &:nth-child(3) {
+                  margin: 0px;
+                }
+              }
+              .left_contacts_line:first-child::before {
+                position: absolute;
+                content: "";
+                width: 15px;
+                height: 15px;
+                left: 0;
+                top: 0;
+                background: url("/images/mail.svg") center center/cover
+                  no-repeat;
+                z-index: 1;
+              }
+              .left_contacts_line:nth-child(2)::before {
+                position: absolute;
+                content: "";
+                width: 15px;
+                height: 15px;
+                left: 0;
+                top: 0;
+                background: url("/images/phone.svg") center center/cover
+                  no-repeat;
+                z-index: 1;
+              }
+              .left_contacts_line:last-child::before {
+                position: absolute;
+                content: "";
+                width: 15px;
+                height: 15px;
+                left: 0;
+                top: 0;
+                background: url("/images/telegram.svg") center center/cover
+                  no-repeat;
+                z-index: 1;
+              }
+            }
+          }
+          .left_education {
+            .left_education_title {
+              @extend %title;
+            }
+            .left_education_items {
+              .education_item {
+                margin: 0px 0px 20px 0px;
+                letter-spacing: 0.8px;
+                .education_item_title {
+                  margin: 0px 0px 10px 0px;
+                  font-weight: 600;
+                  text-transform: capitalize;
+                }
+              }
+              .education_item:last-child {
+                margin: 0;
+              }
+            }
+          }
+          .left_knowledge {
+            .left_knowledge_title {
+              @extend %title;
+            }
+            .left_knowledge_items {
+              .left_knowledge_line {
+                position: relative;
+                margin: 0px 0px 13px 0px;
+                padding: 1px 0px 0px 20px;
+                &:last-child {
+                  margin: 0;
+                }
+              }
+              .left_knowledge_line::before {
+                position: absolute;
+                content: "";
+                width: 15px;
+                height: 15px;
+                top: 0;
+                left: 0;
+                background: url("/images/tick.svg") 0 0 / cover no-repeat;
+              }
+            }
+          }
+        }
+        .left_skills{
+              .left_skills_title{
+                    @extend %title
+              }
+              .left_skills_items{
+                    display: flex;
+                    flex-direction: column;
+                 .skills_item{
+                  margin: 0px 0px 20px 0px;
+                  max-width: 560px;
+                  display: flex;
+                  justify-content: space-between;
+                  flex-wrap: wrap;
+                  .item_name {
+                    letter-spacing: 0.8px;
+                    text-transform: capitalize;
+                    span{
+                          margin: 0px 15px 10px 0px;
+                    }
+                  }
+                  .item_bar {
+                    text-align: right;
+                    position: relative;
+                    top: 4.5px;
+                    .item_bar_first_part,
+                    .item_bar_second_part {
+                      height: 4px;
+                      display: inline-block;
+                      span {
+                          visibility: hidden;
+                        }
+                    }
+                    .item_bar_first_part {
+                      background: #11c7a0;
+                      border-radius: 8px 0px 0px 8px;
+                      margin: 0;
+                    }
+                    .item_bar_second_part {
+                      background: #1d1d1dd3;
+                      border-radius: 0px 8px 8px 0px;
+                      margin: 0;
+                    }
+                  }
+                  }
+              }
+        }
+      }
+    }
+  }
+  .content_right {
+    flex: 1 1 67%;
+    .container {
+      height: 100%;
+      padding: 0px 0px 0px 27px;
+      cursor: pointer;
+      .content_right_row {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .right_im {
+          flex: 1 1 30%;
+          padding: 30px 0px 0px 10px;
+          margin: 0px 0px 21px 0px;
+          .right_im_title {
+            font-size: 43px;
+            text-transform: capitalize;
+            font-weight: 700;
+            letter-spacing: 1.4px;
+            margin: 0px 0px 25px 0px;
+          }
+          .right_im_subtitle {
+            font-size: 21.5px;
+            color: #2dc2a2;
+            letter-spacing: 1.4px;
+          }
+        }
+        .right_info {
+          flex: 1 1 80%;
+          padding: 0px 15px;
+          .right_info_about {
+            border-top: 0.5px solid #000000e5;
+            padding: 20px 0px 0px 0px;
+            .right_info_about_title {
+              @extend %title;
+              margin: 0px 0px 20px 0px;
+            }
+            .right_info_about_text {
+              text-align: justify;
+              line-height: 24px;
+              letter-spacing: 0.8px;
+            }
+          }
+          .right_info_experience {
+            .right_info_experience_title {
+              @extend %title;
+            }
+            .right_info_experience_items {
+              .experience_item {
+                margin: 0px 0px 20px 0px;
+                letter-spacing: 0.8px;
+                line-height: 19px;
+                .experience_item_title {
+                  margin: 0px 0px 10px 0px;
+                  font-weight: 600;
+                }
+              }
+              .experience_item:last-child {
+                margin: 0;
+              }
+              a:hover {
+                color: #11c7a0;
+                font-size: 15px;
+                text-decoration: underline;
+              }
+              .experience_item_subtitle {
+                letter-spacing: 0.9px;
+              }
+            }
+          }
+          .right_info_languages {
+            .right_info_languages_title {
+              @extend %title;
+            }
+            .right_info_languages_items {
+              .languages_item {
+                margin: 0px 0px 20px 0px;
+                max-width: 560px;
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                .item_name {
+                  letter-spacing: 0.8px;
+                  text-transform: capitalize;
+                  span{
+                        margin: 0px 15px 10px 0px;
+                  }
+                }
+                .item_bar {
+                  text-align: right;
+                  position: relative;
+                  top: 4.5px;
+                  .item_bar_first_part,
+                  .item_bar_second_part {
+                    height: 4px;
+                    display: inline-block;
+                    span {
+                        visibility: hidden;
+                      }
+                  }
+                  .item_bar_first_part {
+                    background: #11c7a0;
+                    border-radius: 8px 0px 0px 8px;
+                    margin: 0;
+                  }
+                  .item_bar_second_part {
+                    background: #1d1d1dd3;
+                    border-radius: 0px 8px 8px 0px;
+                    margin: 0;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
