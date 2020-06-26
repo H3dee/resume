@@ -405,6 +405,12 @@ body {
   font-weight: 600;
 }
 
+.content .content_right .container .content_right_row .right_info .right_info_experience .right_info_experience_items .experience_item .experience_item_subtitle {
+  text-align: justify;
+  line-height: 24px;
+  letter-spacing: 0.8px;
+}
+
 .content .content_right .container .content_right_row .right_info .right_info_experience .right_info_experience_items .experience_item:last-child {
   margin: 0;
 }
